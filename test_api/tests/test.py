@@ -1,14 +1,11 @@
-from datetime import datetime
 import xml.etree.ElementTree as ET
-from logging import root
-from xml.dom import minidom
+from datetime import datetime
 from datetime import datetime as dt
+from xml.dom import minidom
+
 import pytest
-import requests
 
 from test_api.src.enums.common import HttpErrorCodes
-
-
 
 
 @pytest.mark.parametrize('date', [
@@ -62,5 +59,3 @@ class TestCurrencyInfo:
             assert isinstance(currency_code, str)
             num_code = valute.getElementsByTagName('NumCode')[0].firstChild.nodeValue
             assert isinstance(num_code, int)
-
-
