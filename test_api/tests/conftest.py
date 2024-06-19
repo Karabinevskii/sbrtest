@@ -1,5 +1,5 @@
 import pytest
-from test_api.src.client.currency_client import CurrencyClient
+from test_api.src.client.api_client import CurrencyClient
 
 
 @pytest.fixture
