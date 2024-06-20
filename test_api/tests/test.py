@@ -1,10 +1,10 @@
+import allure
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from datetime import datetime as dt
 from xml.dom import minidom
 import pytest
 from test_api.src.enums.common import HttpErrorCodes
-import allure
 
 
 @pytest.mark.parametrize('date', [
@@ -87,3 +87,5 @@ class TestCurrencyInfo:
                     float(value)
                 except ValueError:
                     pytest.fail()
+
+
