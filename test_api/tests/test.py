@@ -3,9 +3,8 @@ from datetime import datetime
 from datetime import datetime as dt
 from xml.dom import minidom
 import pytest
-import allure
 from test_api.src.enums.common import HttpErrorCodes
-
+import allure
 
 
 @pytest.mark.parametrize('date', [
