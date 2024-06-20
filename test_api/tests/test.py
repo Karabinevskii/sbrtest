@@ -71,7 +71,7 @@ class TestCurrencyInfo:
                 char_code_data = []
                 char_code = valute.getElementsByTagName('CharCode')[0].firstChild.nodeValue
                 char_code_data.append(char_code)
-                assert char_code in char_code_data, f"Char code '{currency_code}' is not valid"
+                assert char_code in char_code_data, f"Char code '{char_code}' is not valid"
 
                 nominal = valute.getElementsByTagName('Nominal')[0].firstChild.nodeValue
                 assert nominal.isdigit(), f"Nominal '{nominal}' is not valid"
@@ -87,4 +87,3 @@ class TestCurrencyInfo:
                     float(value)
                 except ValueError:
                     pytest.fail()
-
